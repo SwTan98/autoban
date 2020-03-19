@@ -1,0 +1,28 @@
+{
+  "name": "autoban",
+  "version": "1.0.0",
+  "description": "Simple bot that bans newly created accounts on Discord",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon bot.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SwTan98/autoban.git"
+  },
+  "author": "SW",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SwTan98/autoban/issues"
+  },
+  "homepage": "https://github.com/SwTan98/autoban#readme",
+  "dependencies": {
+    "discord.js": "^12.0.2",
+    "moment": "^2.24.0"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.2"
+  }
+}
