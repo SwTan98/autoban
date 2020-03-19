@@ -81,10 +81,15 @@ client.on('guildMemberAdd', member => {
     var b = moment(member.user.createdAt)
     var age = a.diff(b, 'days')
     if (age < minAge) {
-      member.ban(`New account (${age} days)`)
-      client.channels.fetch(log)
-        .then(channel => channel.send(`Banned ${member} (Account age: ${age} days)`))
-        .catch(console.error)
+      member
+        .ban({
+          reason: `New account (${age} days)`
+        })
+        .then(() => {
+          client.channels.fetch(log)
+            .then(channel => channel.send(`Banned ${member} (Account age: ${age} days)`))
+            .catch(console.error)
+        })
     }
   }
 })
