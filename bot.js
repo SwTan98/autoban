@@ -1,4 +1,4 @@
-require('dotenv').config()
+// require('dotenv').config()
 const { Client, MessageEmbed } = require('discord.js')
 const moment = require('moment')
 const client = new Client()
