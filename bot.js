@@ -82,12 +82,10 @@ client.on('guildMemberAdd', member => {
     var age = a.diff(b, 'minutes')
     if (age < minAge) {
       member
-        .kick({
-          reason: `New account (${age} days)`
-        })
+        .kick(`New account (${age} minutes)`)
         .then(() => {
           client.channels.fetch(log)
-            .then(channel => channel.send(`Kicked ${member} (Account age: ${age} days)`))
+            .then(channel => channel.send(`Kicked ${member} (Account age: ${age} minutes)`))
             .catch(console.error)
         })
     }
